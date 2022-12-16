@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberSettingsActivity">
+
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="350dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <Button
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Member" />
+
+    <Button
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="185dp"
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+
+    <Button
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="300dp"
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove" />
+
+    <EditText
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Member Name:"
+        android:textColorHint="black"
+
+        />
+
+    <EditText
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Membership Date:"
+        android:textColorHint="black"
+
+        />
+
+    <EditText
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Member Mail:"
+        android:textColorHint="Black"
+        />
+
+    <EditText
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Member Phone Number:"
+        android:textColorHint="black"
+        />
+
+
+
+</RelativeLayout>
