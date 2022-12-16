@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this, LoginActivity.class);
                 intent.putExtra("type","Admins");
                 startActivity(intent);
+
+                //deneme
             }
         });
     }
