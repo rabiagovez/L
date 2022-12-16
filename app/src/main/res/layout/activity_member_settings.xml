@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Member Name:"
-        android:textColorHint="black"
+
 
         />
 
@@ -57,7 +57,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Membership Date:"
-        android:textColorHint="black"
+
 
         />
 
@@ -70,7 +70,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Member Mail:"
-        android:textColorHint="Black"
+
         />
 
     <EditText
@@ -82,7 +82,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Member Phone Number:"
-        android:textColorHint="black"
+
         />
 
 

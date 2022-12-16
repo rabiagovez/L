@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name:"
-        android:textColorHint="black"
+
 
          />
 
@@ -57,7 +57,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Writer:"
-        android:textColorHint="black"
+
 
         />
 
@@ -70,7 +70,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Year:"
-        android:textColorHint="Black"
+
         />
 
     <EditText
@@ -82,7 +82,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Category:"
-        android:textColorHint="black"
+
         />
 
     <EditText
@@ -94,7 +94,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Publisher:"
-        android:textColorHint="black"/>
+        />
 
     <EditText
         android:layout_marginTop="590dp"
@@ -105,5 +105,5 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="ISBN:"
-        android:textColorHint="black"/>
+        />
 </RelativeLayout>

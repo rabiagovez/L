@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Complaint:"
-        android:textColorHint="black"
+
 
         />
 
@@ -34,7 +34,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Complainant:"
-        android:textColorHint="black"
+
 
         />
 
@@ -47,7 +47,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Complaint Date:"
-        android:textColorHint="Black"
+
         />
 
  />
