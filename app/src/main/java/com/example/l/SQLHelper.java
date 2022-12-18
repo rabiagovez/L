@@ -6,6 +6,7 @@ import android.util.Log;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class SQLHelper {
     Connection connect;
@@ -32,7 +33,7 @@ public class SQLHelper {
         return status;
     }
 
-    public Books readBooks(Books books) {
+    public List<Books> readBooks(Books books, List<Books> booklist) {
 
 
         try {
@@ -44,6 +45,7 @@ public class SQLHelper {
                 ResultSet rst = st.executeQuery(query);
                 while (rst.next()) {
                     books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
+                    booklist.add(books);
 
                 }
 
@@ -53,7 +55,9 @@ public class SQLHelper {
         } catch (Exception ex) {
             Log.e("Mes", ex.getMessage());
         }
-        return books;
+        return booklist;
     }
 
 }
+
+

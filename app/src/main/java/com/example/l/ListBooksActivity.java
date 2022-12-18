@@ -13,15 +13,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class ListBooksActivity extends AppCompatActivity {
     Books books;
-
+List<Books> booksList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_books);
         SQLHelper sqlHelper = new SQLHelper();
-        sqlHelper.readBooks(books);
+        sqlHelper.readBooks(books,booksList);
         ListView listView = findViewById(R.id.listview);
         Adapter adapter = new Adapter(this);
         listView.setAdapter(adapter);
@@ -48,11 +50,11 @@ public class ListBooksActivity extends AppCompatActivity {
             TextView text3 = convertView.findViewById(R.id.textWriter);
             TextView text4 = convertView.findViewById(R.id.textCategory);
             TextView text5 = convertView.findViewById(R.id.textPublisher);
-            text1.setText(books.getName());
-            text2.setText(books.getWriter());
-            text3.setText(books.getCategory());
-            text4.setText(books.getISBN());
-            text5.setText(books.getPublisher());
+            text1.setText(booksList.get(position).getName());
+            text2.setText(booksList.get(position).getWriter());
+            text3.setText(booksList.get(position).getCategory());
+            text4.setText(booksList.get(position).getISBN());
+            text5.setText(booksList.get(position).getPublisher());
             return convertView;
 
         }
