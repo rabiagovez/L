@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookSettingsActivity">
+
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="350dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+
+    <EditText
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Complaint:"
+
+
+        />
+
+    <EditText
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Complainant:"
+
+
+        />
+
+    <EditText
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Complaint Date:"
+
+        />
+
+ />
+</RelativeLayout>
