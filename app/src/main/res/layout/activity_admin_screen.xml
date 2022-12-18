@@ -9,14 +9,16 @@
     <Button
         android:layout_marginLeft="40dp"
         android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="book settıngs" />
 
     <Button
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="270dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="340dp"
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
