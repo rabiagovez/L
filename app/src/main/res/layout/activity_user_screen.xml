@@ -30,5 +30,5 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demand/complaınt" />
+        android:text="request/complaınt" />
 </RelativeLayout>

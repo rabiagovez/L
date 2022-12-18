@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
        btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-           if( sqlHelper.ReadData(type,editText.getText().toString(),editText1.getText().toString())){
+           if( sqlHelper.readData(type,editText.getText().toString(),editText1.getText().toString())){
                if(type.equals("Users")){
                    Intent intent1=new Intent(LoginActivity.this,UserScreenActivity.class);
                    startActivity(intent1);
