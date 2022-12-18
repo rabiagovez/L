@@ -1,6 +1,5 @@
 package com.example.l;
 
-import android.content.Intent;
 import android.util.Log;
 
 import java.sql.Connection;
@@ -33,7 +32,7 @@ public class SQLHelper {
         return status;
     }
 
-    public List<Books> readBooks(Books books, List<Books> booklist) {
+    public List<Books> readBooks(List<Books> booksList) {
 
 
         try {
@@ -44,9 +43,8 @@ public class SQLHelper {
                 Statement st = connect.createStatement();
                 ResultSet rst = st.executeQuery(query);
                 while (rst.next()) {
-                    books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
-                    booklist.add(books);
-
+                    Books books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
+                    booksList.add(books);
                 }
 
             }
@@ -55,8 +53,34 @@ public class SQLHelper {
         } catch (Exception ex) {
             Log.e("Mes", ex.getMessage());
         }
-        return booklist;
+        Log.e("A",booksList.get(0).getCategory());
+        return booksList;
     }
+    public List<Books> readBooks(List<Books> booksList,String parameter,String bookname) {
+
+
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionclass();
+            if (connect != null) {
+                String query = "select * from Books where "+parameter+" like '%"+bookname+"%'";
+                Statement st = connect.createStatement();
+                ResultSet rst = st.executeQuery(query);
+                while (rst.next()) {
+                    Books books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
+                    booksList.add(books);
+                }
+
+            }
+
+
+        } catch (Exception ex) {
+            Log.e("Mes", ex.getMessage());
+        }
+        //Log.e("A",booksList.get(0).getCategory());
+        return booksList;
+    }
+
 
 }
 

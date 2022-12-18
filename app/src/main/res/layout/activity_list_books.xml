@@ -8,11 +8,16 @@
 
     <EditText
         android:id="@+id/edittextfind"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
         android:hint="Find book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></EditText>
-
+    <EditText
+        android:id="@+id/edittextfind2"
+android:layout_marginLeft="200dp"
+        android:hint="Find Writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></EditText>
     <ListView
         android:layout_marginTop="50dp"
         android:id="@+id/listview"
