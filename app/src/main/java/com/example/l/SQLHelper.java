@@ -33,7 +33,7 @@ public class SQLHelper {
     }
 
     public Books readBooks(Books books) {
-         books = new Books();
+
 
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
