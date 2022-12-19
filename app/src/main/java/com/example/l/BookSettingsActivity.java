@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,20 +60,18 @@ public class BookSettingsActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                booksList.clear();
                 sqlHelper.updateBook(text1.getText().toString(), text3.getText().toString(), text2.getText().toString(), text4.getText().toString(), text5.getText().toString(), text6.getText().toString(), id);
-                sqlHelper.readBooks(booksList);
 
                 SetListView();
-
+                Toast.makeText(BookSettingsActivity.this, "Updated book", Toast.LENGTH_SHORT).show();
 
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                booksList.clear();
                 sqlHelper.removeBook(id);
+                booksList.clear();
                 sqlHelper.readBooks(booksList);
                 SetListView();
 
@@ -105,6 +105,7 @@ public class BookSettingsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     id = position;
+                    Log.e("ID:", String.valueOf(id));
                     EditText text1 = findViewById(R.id.editTextTextPersonName);
                     EditText text2 = findViewById(R.id.editTextTextPersonName2);
                     EditText text3 = findViewById(R.id.editTextTextPersonName4);

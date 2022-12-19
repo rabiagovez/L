@@ -100,7 +100,7 @@ public class SQLHelper {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionclass();
             if (connect != null) {
-                String query = "update Books set Name='"+name+"',Year='"+year+"',Writer='"+writer+"',Category='"+category+"',Publisher='"+publisher+"',ISBN='"+isbn+"' where ID='"+id+"'";
+                String query = "update Books set Name='"+name+"',Year='"+year+"',Writer='"+writer+"',Category='"+category+"',Publisher='"+publisher+"',ISBN='"+isbn+"' where ID='"+(id+1)+"'";
                 Statement st = connect.createStatement();
                 st.executeQuery(query);
                 connect.close();
