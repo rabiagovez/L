@@ -80,8 +80,48 @@ public class SQLHelper {
         //Log.e("A",booksList.get(0).getCategory());
         return booksList;
     }
+    public void addNewBook(String name,String year,String writer,String category,String publisher,String isbn){
+        try {
 
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionclass();
+            if (connect != null) {
+                String query = "insert into Books (Name,Year,Writer,Category,Publisher,ISBN) values ('"+name+"','"+year+"','"+writer+"','"+category+"','"+publisher+"','"+isbn+"')";
+                Statement st = connect.createStatement();
+                st.executeQuery(query);
+                connect.close();
+            }
+        } catch (Exception ex) {
+        }
+    }
+    public void updateBook(String name,String year,String writer,String category,String publisher,String isbn,int id){
+        try {
 
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionclass();
+            if (connect != null) {
+                String query = "update Books set Name='"+name+"',Year='"+year+"',Writer='"+writer+"',Category='"+category+"',Publisher='"+publisher+"',ISBN='"+isbn+"' where ID='"+id+"'";
+                Statement st = connect.createStatement();
+                st.executeQuery(query);
+                connect.close();
+            }
+        } catch (Exception ex) {
+        }
+    }
+    public void removeBook(int id){
+        try {
+
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionclass();
+            if (connect != null) {
+                String query = "delete from Books where ID='"+id+"'";
+                Statement st = connect.createStatement();
+                st.executeQuery(query);
+                connect.close();
+            }
+        } catch (Exception ex) {
+        }
+    }
 }
 
 

@@ -7,37 +7,38 @@
     tools:context=".BookSettingsActivity">
 
     <ListView
+        android:id="@+id/listviewbs"
         android:layout_width="409dp"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
 
     <Button
-        android:layout_marginTop="750dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="280dp"
         android:id="@+id/button11"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="New Book" />
 
     <Button
-        android:layout_marginTop="750dp"
-        android:layout_marginLeft="170dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="280dp"
         android:id="@+id/button13"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Update" />
 
     <Button
-        android:layout_marginTop="750dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="280dp"
         android:id="@+id/button14"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Remove" />
 
     <EditText
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="370dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
          />
 
     <EditText
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="410dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
@@ -62,7 +63,7 @@
         />
 
     <EditText
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="450dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
@@ -74,7 +75,7 @@
         />
 
     <EditText
-         android:layout_marginTop="520dp"
+         android:layout_marginTop="490dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="wrap_content"
@@ -86,7 +87,7 @@
         />
 
     <EditText
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="530dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="wrap_content"
@@ -97,7 +98,7 @@
         />
 
     <EditText
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="560dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="wrap_content"

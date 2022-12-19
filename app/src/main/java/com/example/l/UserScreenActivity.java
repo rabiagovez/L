@@ -26,13 +26,8 @@ public class UserScreenActivity extends AppCompatActivity {
             }
         });
 
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserScreenActivity.this,BorrowBookActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
 
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override

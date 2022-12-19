@@ -1,6 +1,7 @@
 package com.example.l;
 
 public class Books {
+    private int id;
     private String name;
     private String category;
     private String writer;
@@ -17,6 +18,11 @@ public class Books {
         this.ISBN = ISBN;
     }
     public Books(){}
+
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
