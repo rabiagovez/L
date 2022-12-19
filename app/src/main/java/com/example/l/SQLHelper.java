@@ -43,7 +43,7 @@ public class SQLHelper {
                 Statement st = connect.createStatement();
                 ResultSet rst = st.executeQuery(query);
                 while (rst.next()) {
-                    Books books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
+                    Books books = new Books(rst.getInt("ID"),rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
                     booksList.add(books);
                 }
 
@@ -53,7 +53,7 @@ public class SQLHelper {
         } catch (Exception ex) {
             Log.e("Mes", ex.getMessage());
         }
-        Log.e("A",booksList.get(0).getCategory());
+        //Log.e("A",booksList.get(0).getCategory());
         return booksList;
     }
     public List<Books> readBooks(List<Books> booksList,String parameter,String bookname) {
@@ -67,7 +67,7 @@ public class SQLHelper {
                 Statement st = connect.createStatement();
                 ResultSet rst = st.executeQuery(query);
                 while (rst.next()) {
-                    Books books = new Books(rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
+                    Books books = new Books(rst.getInt("ID"),rst.getString("Name"), rst.getString("Category"), rst.getString("Writer"), rst.getInt("Year"), rst.getString("Publisher"), rst.getString("ISBN"));
                     booksList.add(books);
                 }
 
@@ -80,7 +80,7 @@ public class SQLHelper {
         //Log.e("A",booksList.get(0).getCategory());
         return booksList;
     }
-    public void addNewBook(String name,String year,String writer,String category,String publisher,String isbn){
+    public void addNewBook(String name,String writer,String year,String category,String publisher,String isbn){
         try {
 
             ConnectionHelper connectionHelper = new ConnectionHelper();
@@ -94,18 +94,19 @@ public class SQLHelper {
         } catch (Exception ex) {
         }
     }
-    public void updateBook(String name,String year,String writer,String category,String publisher,String isbn,int id){
+    public void updateBook(String name,String writer,String year,String category,String publisher,String isbn,int id){
         try {
 
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionclass();
             if (connect != null) {
-                String query = "update Books set Name='"+name+"',Year='"+year+"',Writer='"+writer+"',Category='"+category+"',Publisher='"+publisher+"',ISBN='"+isbn+"' where ID='"+(id+1)+"'";
+                String query = "update Books set Name='"+name+"',Year='"+year+"',Writer='"+writer+"',Category='"+category+"',Publisher='"+publisher+"',ISBN='"+isbn+"' where ID='"+(id)+"'";
                 Statement st = connect.createStatement();
                 st.executeQuery(query);
                 connect.close();
             }
         } catch (Exception ex) {
+            Log.e("A",ex.getMessage());
         }
     }
     public void removeBook(int id){
@@ -114,7 +115,7 @@ public class SQLHelper {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionclass();
             if (connect != null) {
-                String query = "delete from Books where ID='"+id+"'";
+                String query = "delete from Books where ID='"+(id)+"'";
                 Statement st = connect.createStatement();
                 st.executeQuery(query);
                 connect.close();

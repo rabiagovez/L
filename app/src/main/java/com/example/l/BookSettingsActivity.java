@@ -26,8 +26,7 @@ import java.util.List;
 
 public class BookSettingsActivity extends AppCompatActivity {
     List<Books> booksList = new ArrayList<Books>();
-    int id = 0;
-
+    int id=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,19 +38,20 @@ public class BookSettingsActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.button11);
         Button btn2 = findViewById(R.id.button13);
         Button btn3 = findViewById(R.id.button14);
-        EditText text1 = findViewById(R.id.editTextTextPersonName);
-        EditText text2 = findViewById(R.id.editTextTextPersonName2);
-        EditText text3 = findViewById(R.id.editTextTextPersonName4);
-        EditText text4 = findViewById(R.id.editTextTextPersonName5);
-        EditText text5 = findViewById(R.id.editTextTextPersonName6);
-        EditText text6 = findViewById(R.id.editTextTextPersonName7);
+        EditText text1 = findViewById(R.id.edittextname);
+        EditText text2 = findViewById(R.id.edittextwriter);
+        EditText text3 = findViewById(R.id.edittextyear);
+        EditText text4 = findViewById(R.id.edittextcategory);
+        EditText text5 = findViewById(R.id.edittextpublisher);
+        EditText text6 = findViewById(R.id.edittextisbn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 booksList.clear();
-                sqlHelper.addNewBook(text1.getText().toString(), text3.getText().toString(), text2.getText().toString(), text4.getText().toString(), text5.getText().toString(), text6.getText().toString());
+                sqlHelper.addNewBook(text1.getText().toString(), text2.getText().toString(), text3.getText().toString(), text4.getText().toString(), text5.getText().toString(), text6.getText().toString());
                 sqlHelper.readBooks(booksList);
+                Toast.makeText(BookSettingsActivity.this, "Added book", Toast.LENGTH_SHORT).show();
 
                 SetListView();
             }
@@ -60,8 +60,9 @@ public class BookSettingsActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sqlHelper.updateBook(text1.getText().toString(), text3.getText().toString(), text2.getText().toString(), text4.getText().toString(), text5.getText().toString(), text6.getText().toString(), id);
-
+                sqlHelper.updateBook(text1.getText().toString(), text2.getText().toString(), text3.getText().toString(), text4.getText().toString(), text5.getText().toString(), text6.getText().toString(), id);
+                booksList.clear();
+                sqlHelper.readBooks(booksList);
                 SetListView();
                 Toast.makeText(BookSettingsActivity.this, "Updated book", Toast.LENGTH_SHORT).show();
 
@@ -104,21 +105,21 @@ public class BookSettingsActivity extends AppCompatActivity {
             rlt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    id = position;
-                    Log.e("ID:", String.valueOf(id));
-                    EditText text1 = findViewById(R.id.editTextTextPersonName);
-                    EditText text2 = findViewById(R.id.editTextTextPersonName2);
-                    EditText text3 = findViewById(R.id.editTextTextPersonName4);
-                    EditText text4 = findViewById(R.id.editTextTextPersonName5);
-                    EditText text5 = findViewById(R.id.editTextTextPersonName6);
-                    EditText text6 = findViewById(R.id.editTextTextPersonName7);
+                    EditText text1 = findViewById(R.id.edittextname);
+                    EditText text2 = findViewById(R.id.edittextwriter);
+                    EditText text3 = findViewById(R.id.edittextyear);
+                    EditText text4 = findViewById(R.id.edittextcategory);
+                    EditText text5 = findViewById(R.id.edittextpublisher);
+                    EditText text6 = findViewById(R.id.edittextisbn);
 
                     text1.setText(booksList.get(position).getName());
-                    text2.setText(String.valueOf(booksList.get(position).getYear()));
-                    text3.setText(booksList.get(position).getWriter());
+                    text2.setText(booksList.get(position).getWriter());
+                    text3.setText(String.valueOf(booksList.get(position).getYear()));
                     text4.setText(booksList.get(position).getCategory());
                     text5.setText(booksList.get(position).getPublisher());
                     text6.setText(booksList.get(position).getISBN());
+                    id=booksList.get(position).getId();
+                    Log.e("a", String.valueOf(id));
                 }
             });
             TextView text1 = convertView.findViewById(R.id.textName);

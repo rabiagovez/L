@@ -40,7 +40,7 @@
     <EditText
         android:layout_marginTop="370dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edittextname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -52,7 +52,7 @@
     <EditText
         android:layout_marginTop="410dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edittextwriter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -65,7 +65,7 @@
     <EditText
         android:layout_marginTop="450dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/edittextyear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -77,7 +77,7 @@
     <EditText
          android:layout_marginTop="490dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/edittextcategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -89,7 +89,7 @@
     <EditText
         android:layout_marginTop="530dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/edittextpublisher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -100,7 +100,7 @@
     <EditText
         android:layout_marginTop="560dp"
         android:layout_marginLeft="20dp"
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/edittextisbn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

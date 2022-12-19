@@ -9,7 +9,8 @@ public class Books {
     private String publisher;
     private String ISBN;
 
-    public Books(String name, String category, String writer, int year, String publisher, String ISBN) {
+    public Books(int id,String name, String category, String writer, int year, String publisher, String ISBN) {
+       this.id=id;
         this.name = name;
         this.category = category;
         this.writer = writer;
@@ -18,6 +19,10 @@ public class Books {
         this.ISBN = ISBN;
     }
     public Books(){}
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;
