@@ -121,7 +121,105 @@ public class SQLHelper {
                 connect.close();
             }
         } catch (Exception ex) {
+        }}
+
+
+
+
+
+
+
+        //
+        public List<Users> readUsers(List<Users> usersList) {
+
+
+            try {
+                ConnectionHelper connectionHelper = new ConnectionHelper();
+                connect = connectionHelper.connectionclass();
+                if (connect != null) {
+                    String query = "select * from Users";
+                    Statement st = connect.createStatement();
+                    ResultSet rst = st.executeQuery(query);
+                    while (rst.next()) {
+                        Users users = new Users(rst.getString("Member Name"), rst.getString("Membership Date"), rst.getString("Member Mail"),  rst.getString("Member Phone"));
+                        usersList.add(users);
+                    }
+
+                }
+
+
+            } catch (Exception ex) {
+                Log.e("Mes", ex.getMessage());
+            }
+            return usersList;
+
         }
+
+        public List<Users> readUsers(List<Users> usersList,String parameter,String username) {
+
+
+            try {
+                ConnectionHelper connectionHelper = new ConnectionHelper();
+                connect = connectionHelper.connectionclass();
+                if (connect != null) {
+                    String query = "select * from Users where "+parameter+" like '%"+username+"%'";
+                    Statement st = connect.createStatement();
+                    ResultSet rst = st.executeQuery(query);
+                    while (rst.next()) {
+                        Users users = new Users(rst.getString("Member Name"), rst.getString("Membership Date"), rst.getString("Member Mail"), rst.getString("Member Phone"));
+                        usersList.add(users);
+                    }
+
+                }
+
+
+            } catch (Exception ex) {
+                Log.e("Mes", ex.getMessage());
+            }
+            //Log.e("A",booksList.get(0).getCategory());
+            return usersList;
+        }
+        public void addNewUser(String memberName,String membershipDate,String memberMail,String memberPhone){
+            try {
+
+                ConnectionHelper connectionHelper = new ConnectionHelper();
+                connect = connectionHelper.connectionclass();
+                if (connect != null) {
+                    String query = "insert into Users (Name,Date,Mail,Phone) values ('"+memberName+"','"+membershipDate+"','"+memberMail+"','"+memberPhone+"')";
+                    Statement st = connect.createStatement();
+                    st.executeQuery(query);
+                    connect.close();
+                }
+            } catch (Exception ex) {
+            }
+        }
+        public void updateUsers(String memberName,String membershipDate,String memberMail,String memberPhone, int id){
+            try {
+
+                ConnectionHelper connectionHelper = new ConnectionHelper();
+                connect = connectionHelper.connectionclass();
+                if (connect != null) {
+                    String query = "update Users set Name='"+memberName+"',Date='"+membershipDate+"',Mail='"+memberMail+"',Phone='"+memberPhone+"' where ID='"+id+"'";
+                    Statement st = connect.createStatement();
+                    st.executeQuery(query);
+                    connect.close();
+                }
+            } catch (Exception ex) {
+            }
+        }
+          public void removeUsers(int id){
+              try {
+
+                  ConnectionHelper connectionHelper = new ConnectionHelper();
+                  connect = connectionHelper.connectionclass();
+                  if (connect != null) {
+                      String query = "delete from Books where ID='"+id+"'";
+                      Statement st = connect.createStatement();
+                      st.executeQuery(query);
+                      connect.close();
+                  }
+              }   catch (Exception ex) {
+            }
     }
 }
 

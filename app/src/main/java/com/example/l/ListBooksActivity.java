@@ -27,6 +27,7 @@ List<Books> booksList=new ArrayList<Books>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_books);
+
         SQLHelper sqlHelper = new SQLHelper();
         sqlHelper.readBooks(booksList);
         SetListView();
