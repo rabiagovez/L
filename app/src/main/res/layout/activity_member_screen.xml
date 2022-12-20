@@ -10,25 +10,19 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="280dp"
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Lıst books"
         tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="152dp" />
-
-    <Button
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="280dp"
-        android:id="@+id/button4"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="BORROW/LEND BOOK" />
+        tools:layout_editor_absoluteY="152dp"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="request/complaınt" />
 </RelativeLayout>

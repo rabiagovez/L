@@ -8,13 +8,13 @@
 
     <EditText
         android:id="@+id/edittextfind"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="200dp"
         android:hint="Find book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></EditText>
     <EditText
         android:id="@+id/edittextfind2"
-android:layout_marginLeft="200dp"
+android:layout_marginLeft="400dp"
         android:hint="Find Writer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></EditText>

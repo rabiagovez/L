@@ -12,10 +12,9 @@ public class UserScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_screen);
+        setContentView(R.layout.activity_member_screen);
 
         Button btn3=findViewById(R.id.button3);
-        Button btn4=findViewById(R.id.button4);
         Button btn5=findViewById(R.id.button5);
 
         btn3.setOnClickListener(new View.OnClickListener() {
