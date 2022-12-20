@@ -15,7 +15,6 @@ public class AdminScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_screen);
 
         Button btn6=findViewById(R.id.button6);
-        Button btn7=findViewById(R.id.button7);
 
 
         btn6.setOnClickListener(new View.OnClickListener() {
@@ -26,13 +25,7 @@ public class AdminScreenActivity extends AppCompatActivity {
             }
         });
 
-        btn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminScreenActivity.this,UserListActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
     }

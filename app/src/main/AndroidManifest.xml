@@ -15,20 +15,6 @@
         android:theme="@style/Theme.L"
         tools:targetApi="31">
         <activity
-            android:name=".UserListActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ViewComplaintActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".MemberSettingsActivity"
             android:exported="false">
             <meta-data
@@ -37,13 +23,6 @@
         </activity>
         <activity
             android:name=".BookSettingsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".RequestActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

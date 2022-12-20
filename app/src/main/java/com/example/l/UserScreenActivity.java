@@ -15,7 +15,6 @@ public class UserScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_member_screen);
 
         Button btn3=findViewById(R.id.button3);
-        Button btn5=findViewById(R.id.button5);
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,12 +27,6 @@ public class UserScreenActivity extends AppCompatActivity {
 
 
 
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(UserScreenActivity.this,RequestActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
